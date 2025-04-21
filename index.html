@@ -11,40 +11,85 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #004080;
       color: white;
       padding: 20px;
       text-align: center;
     }
+
     main {
       padding: 20px;
     }
+
+    .pdf-message {
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
     .pdf-container {
       width: 100%;
-      height: 90vh;
+      height: 80vh;
       border: none;
     }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
       color: #888;
     }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.4em;
+      }
+
+      .pdf-message {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+
+      .pdf-container {
+        height: 70vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.2em;
+      }
+
+      header p {
+        font-size: 0.9em;
+      }
+
+      .pdf-message {
+        font-size: 0.95em;
+      }
+
+      .pdf-container {
+        height: 65vh;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Field Visit Analysis Report 2024</h1>
-    <p>Prepared by Ashish Chaudhari | Lend A Hand India</p>
+    <p>Prepared by <strong>Ashish Chaudhari</strong> | Lend A Hand India</p>
   </header>
 
   <main>
-    <p style="text-align: center; font-size: 1.1em;">
-      View the full report below. If it doesn't load, <a href="Field_Visit_Analysis_Report_21_04.pdf" target="_blank">click here to open it</a>.
+    <p class="pdf-message">
+      View the full report below. If it doesn't load, 
+      <a href="Field_Visit_Analysis_Report_21_04.pdf" target="_blank">click here to open it</a>.
     </p>
 
-    <embed class="pdf-container" src="Field_Visit_Analysis_Report_21_04.pdf" type="application/pdf" />
+    <iframe class="pdf-container" src="Field_Visit_Analysis_Report_21_04.pdf" type="application/pdf"></iframe>
   </main>
 
   <footer>
