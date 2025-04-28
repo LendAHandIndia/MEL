@@ -23,15 +23,9 @@
       padding: 20px;
     }
 
-    .pdf-message {
-      text-align: center;
-      font-size: 1.1em;
-      margin-bottom: 15px;
-    }
-
     .pdf-container {
       width: 100%;
-      height: 80vh;
+      height: 90vh;
       border: none;
     }
 
@@ -42,19 +36,12 @@
       color: #888;
     }
 
-    /* Mobile adjustments */
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.4em;
       }
-
-      .pdf-message {
-        font-size: 1em;
-        padding: 0 10px;
-      }
-
       .pdf-container {
-        height: 70vh;
+        height: 75vh;
       }
     }
 
@@ -62,15 +49,6 @@
       header h1 {
         font-size: 1.2em;
       }
-
-      header p {
-        font-size: 0.9em;
-      }
-
-      .pdf-message {
-        font-size: 0.95em;
-      }
-
       .pdf-container {
         height: 65vh;
       }
@@ -84,12 +62,7 @@
   </header>
 
   <main>
-    <p class="pdf-message">
-      View the full report below. If it doesn't load, 
-      <a href="Field_Visit_Analysis_Report.pdf" target="_blank">click here to open it</a>.
-    </p>
-
-    <iframe class="pdf-container" src="Field_Visit_Analysis_Report.pdf" type="application/pdf"></iframe>
+    <embed src="Field_Visit_Analysis_Report.pdf" type="application/pdf" class="pdf-container" />
   </main>
 
   <footer>
